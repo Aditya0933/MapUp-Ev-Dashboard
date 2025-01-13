@@ -1,6 +1,6 @@
 export const fetchBarChartData = async (year) => {
     try {
-      const response = await fetch(`http://localhost:3001/bar-chart/${year}`);
+      const response = await fetch(`https://ev-dashboard-b3yr.onrender.com/bar-chart/${year}`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

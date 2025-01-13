@@ -1,7 +1,7 @@
 export const fetchModelYearData = async (year) => {
     try {
       // Update URL to match the correct backend route
-      const response = await fetch(`http://localhost:3001/model-year-make/${year}`);
+      const response = await fetch(`https://ev-dashboard-b3yr.onrender.com/model-year-make/${year}`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

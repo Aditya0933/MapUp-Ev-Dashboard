@@ -1,6 +1,6 @@
 export const fetchScatterPlotData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/scatter-plot`);
+      const response = await fetch(`https://ev-dashboard-b3yr.onrender.com/scatter-plot`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

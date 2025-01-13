@@ -1,6 +1,6 @@
 export const fetchPieChartData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/pie-chart`);
+      const response = await fetch(`https://ev-dashboard-b3yr.onrender.com/pie-chart`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

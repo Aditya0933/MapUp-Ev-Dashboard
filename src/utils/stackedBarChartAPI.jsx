@@ -1,6 +1,6 @@
 export const fetchStackedBarChartData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/stacked-bar-chart`);
+      const response = await fetch(`https://ev-dashboard-b3yr.onrender.com/stacked-bar-chart`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
