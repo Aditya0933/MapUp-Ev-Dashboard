@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { FaHome, FaChartLine, FaChartBar, FaCog } from "react-icons/fa";
-import { IoIosArrowDown, IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowDroprightCircle, IoMdPie } from "react-icons/io";
 import { MdOutlinePieChart } from "react-icons/md"; // New icon for chart
 import { AiOutlineLineChart } from "react-icons/ai"; // New icon for chart
+import { FaChartArea } from "react-icons/fa6";
 
 const Sidebar = ({ setSelectedView }) => {
   // Accept function as prop
@@ -33,17 +34,17 @@ const Sidebar = ({ setSelectedView }) => {
 
   return (
     <div className="h-screen max-w-64 bg-gray-800 text-white relative">
-      <div className="bg-gray-800 p-2 rounded-full absolute top-[40%] -right-[50px] transform -translate-x-1/2 -translate-y-1/2">
-        <IoIosArrowDroprightCircle
-          className="text-white text-[35px] cursor-pointer"
-          onClick={closeSideNavBar}
-        />
+      <div
+        className="bg-gray-800 p-2 rounded-full absolute top-[40%] -right-[50px] transform -translate-x-1/2 -translate-y-1/2 transition-all"
+        onClick={closeSideNavBar}
+      >
+        <IoIosArrowDroprightCircle className="text-white text-[35px] cursor-pointer" />
       </div>
       <ul className="space-y-2 relative">
-        <li className="px-8">
+        <li className="">
           <ul className="relative">
             {/* Each List Item with icon */}
-            <li className="py-2 flex items-center justify-between space-x-2 cursor-pointer">
+            <li className="py-2 flex items-center justify-between space-x-2 cursor-pointer hover:bg-gray-600 px-8 transition-all rounded-3xl">
               <div
                 className="flex gap-2"
                 onClick={() => setSelectedView("EVDataDashboard")}
@@ -67,10 +68,12 @@ const Sidebar = ({ setSelectedView }) => {
             <li className="sublist">
               <ul>
                 <li
-                  className="py-2 pl-7 flex items-center space-x-2 cursor-pointer"
+                  className={`py-2 ${
+                    sidenavbar === true ? "pl-6" : "pl-4"
+                  } flex items-center space-x-2 cursor-pointer hover:bg-gray-700 mx-8 transition-all rounded-3xl mt-2`}
                   onClick={() => setSelectedView("AnalyticsChart1")}
                 >
-                  <AiOutlineLineChart className="text-white text-2xl" />
+                  <FaChartBar className="text-white text-2xl" />
                   {sidenavbar ? (
                     <button className="w-full text-left whitespace-nowrap">
                       Analytics Chart 1
@@ -80,7 +83,9 @@ const Sidebar = ({ setSelectedView }) => {
                   )}
                 </li>
                 <li
-                  className="py-2 pl-7 flex items-center space-x-2 cursor-pointer"
+                  className={`py-2 ${
+                    sidenavbar === true ? "pl-6" : "pl-4"
+                  } flex items-center space-x-2 cursor-pointer hover:bg-gray-700 mx-8 transition-all rounded-3xl mt-2`}
                   onClick={() => setSelectedView("AnalyticsChart2")}
                 >
                   <MdOutlinePieChart className="text-white text-2xl" />
@@ -93,10 +98,12 @@ const Sidebar = ({ setSelectedView }) => {
                   )}
                 </li>
                 <li
-                  className="py-2 pl-7 flex items-center space-x-2 cursor-pointer"
+                  className={`py-2 ${
+                    sidenavbar === true ? "pl-6" : "pl-4"
+                  } flex items-center space-x-2 cursor-pointer hover:bg-gray-700 mx-8 transition-all rounded-3xl mt-2`}
                   onClick={() => setSelectedView("AnalyticsChart3")}
                 >
-                  <FaChartBar className="text-white text-2xl" />
+                  <AiOutlineLineChart className="text-white text-2xl" />
                   {sidenavbar ? (
                     <button className="w-full text-left whitespace-nowrap">
                       Analytics Chart 3
@@ -106,10 +113,12 @@ const Sidebar = ({ setSelectedView }) => {
                   )}
                 </li>
                 <li
-                  className="py-2 pl-7 flex items-center space-x-2 cursor-pointer"
+                  className={`py-2 ${
+                    sidenavbar === true ? "pl-6" : "pl-4"
+                  } flex items-center space-x-2 cursor-pointer hover:bg-gray-700 mx-8 transition-all rounded-3xl mt-2`}
                   onClick={() => setSelectedView("AnalyticsChart4")}
                 >
-                  <FaChartBar className="text-white text-2xl" />
+                  <FaChartArea className="text-white text-2xl" />
                   {sidenavbar ? (
                     <button className="w-full text-left whitespace-nowrap">
                       Analytics Chart 4
@@ -119,10 +128,12 @@ const Sidebar = ({ setSelectedView }) => {
                   )}
                 </li>
                 <li
-                  className="py-2 pl-7 flex items-center space-x-2 cursor-pointer"
+                  className={`py-2 ${
+                    sidenavbar === true ? "pl-6" : "pl-4"
+                  } flex items-center space-x-2 cursor-pointer hover:bg-gray-700 mx-8 transition-all rounded-3xl mt-2`}
                   onClick={() => setSelectedView("AnalyticsChart5")}
                 >
-                  <FaChartLine className="text-white text-2xl" />
+                  <FaChartBar className="text-white text-2xl" />
                   {sidenavbar ? (
                     <button className="w-full text-left whitespace-nowrap">
                       Analytics Chart 5
@@ -132,10 +143,12 @@ const Sidebar = ({ setSelectedView }) => {
                   )}
                 </li>
                 <li
-                  className="py-2 pl-7 flex items-center space-x-2 cursor-pointer"
+                  className={`py-2 ${
+                    sidenavbar === true ? "pl-6" : "pl-4"
+                  } flex items-center space-x-2 cursor-pointer hover:bg-gray-700 mx-8 transition-all rounded-3xl mt-2`}
                   onClick={() => setSelectedView("AnalyticsChart6")}
                 >
-                  <FaChartBar className="text-white text-2xl" />
+                  <IoMdPie className="text-white text-2xl" />
                   {sidenavbar ? (
                     <button className="w-full text-left whitespace-nowrap">
                       Analytics Chart 6
