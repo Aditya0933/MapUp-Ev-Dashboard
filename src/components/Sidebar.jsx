@@ -180,3 +180,4 @@ const Sidebar = ({ setSelectedView }) => {
 };
 
 export default Sidebar;
+ 
